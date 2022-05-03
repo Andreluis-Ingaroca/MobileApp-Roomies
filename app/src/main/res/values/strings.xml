@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">IntentoBottom</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="listDepartments">
+        <item>Lima</item>
+        <item>Junin</item>
+        <item>Arequipa</item>
+        <item>Amazonas</item>
+    </string-array>
+    <string name="departments_prompt">Seleccione un departamento</string>
+
+    <string-array name="listProvinces">
+        <item>Lima</item>
+        <item>Junin</item>
+        <item>Arequipa</item>
+        <item>Amazonas</item>
+    </string-array>
+    <string name="provinces_prompt">Seleccione una provincia</string>
+
+    <string-array name="listDistricts">
+        <item>Miraflores</item>
+        <item>Surco</item>
+        <item>Lince</item>
+        <item>Magdalena</item>
+    </string-array>
+    <string name="districts_prompt">Seleccione un distrito</string>
+
+    <array name="initial_slider_price">
+        <item>1000</item>
+        <item>3500</item>
+    </array>
+
+    <array name="initial_slider_area">
+        <item>70</item>
+        <item>120</item>
+    </array>
+
+    <string-array name="listAntiquity">
+        <item>Menos de 5 años</item>
+        <item>Menos de 10 años</item>
+        <item>Mas de 10 años</item>
+    </string-array>
+    <string name="antiques_prompt">Seleccione una opcion</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+</resources>

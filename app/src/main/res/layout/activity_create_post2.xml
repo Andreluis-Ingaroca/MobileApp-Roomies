@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreatePostActivity2">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paso 2 de 3"
+            android:gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="16dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crea tu Aviso"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:textSize="28dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Características Principales"
+            android:textSize="21dp"
+            android:paddingTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:textStyle="bold"
+            android:paddingBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Habitaciones"
+                android:textSize="20dp"
+                android:layout_marginLeft="30dp"/>
+
+            <com.huynn109.IncreaseDecreaseButton
+                android:id="@+id/cantHab"
+                app:activeIconColor="@color/increase_decrease_lib_active"
+                app:minNumber="1"
+                app:maxNumber="5"
+                app:initNumber="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Baños"
+                android:textSize="20dp"
+                android:layout_marginLeft="30dp"
+                />
+
+            <com.huynn109.IncreaseDecreaseButton
+                android:id="@+id/cantBanos"
+                app:activeIconColor="@color/increase_decrease_lib_active"
+                app:minNumber="1"
+                app:maxNumber="5"
+                app:initNumber="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medio Baño"
+                android:textSize="20dp"
+                android:layout_marginLeft="30dp"/>
+
+            <com.huynn109.IncreaseDecreaseButton
+                android:id="@+id/cantMed"
+                app:activeIconColor="@color/increase_decrease_lib_active"
+                app:minNumber="1"
+                app:maxNumber="5"
+                app:initNumber="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Superficie"
+            android:textSize="21dp"
+            android:paddingTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_box"
+                android:padding="15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="m2"
+                android:textSize="22dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Antigüedad"
+            android:textSize="21dp"
+            android:layout_marginLeft="30dp"
+            android:paddingTop="25dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingHorizontal="30dp">
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_one"
+                    android:text="A estrenar"
+                    android:textSize="20dp"
+                    android:checked="true"
+                    android:buttonTint="#ffb600"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_two"
+                    android:text="Usado"
+                    android:textSize="20dp"
+                    android:buttonTint="#ffb600"/>
+
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precio"
+            android:textSize="21dp"
+            android:paddingTop="25dp"
+            android:layout_marginLeft="30dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S/"
+                android:textSize="22dp"
+                android:layout_marginLeft="30dp"/>
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_box"
+                android:padding="15dp"
+                />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descripción del inmueble"
+            android:textSize="21dp"
+            android:textStyle="bold"
+            android:paddingTop="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_box"
+            android:padding="15dp"
+            android:hint="Título"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_box_big"
+            android:padding="15dp"
+            android:hint="Descripción"
+            android:inputType="textImeMultiLine"
+            android:scrollbars="vertical"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continuar"
+            android:id="@+id/btnContinuar2"
+            android:backgroundTint="#ffb600"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreatePostActivity3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity3"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paso 3 de 3"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:textSize="16dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agrega fotos y videos de tu inmueble"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:textSize="28dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fotos"
+            android:layout_marginBottom="30dp"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            />
+
+        <Button
+            android:id="@+id/select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:text="Agrega fotos de tu inmueble"
+            android:backgroundTint="#8B5E83"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingHorizontal="40dp"
+            android:visibility="gone"
+            android:id="@+id/linearPhotos">
+
+
+            <!--click here to view previous image-->
+            <Button
+                android:id="@+id/previous"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_baseline_keyboard_arrow_left_24"/>
+
+            <ImageSwitcher
+                android:id="@+id/image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginHorizontal="20dp" />
+
+
+            <!--click here to view next image-->
+            <Button
+                android:id="@+id/next"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Videos"
+            android:layout_marginBottom="30dp"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            />
+        <VideoView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/video"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/galleryBtn2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agrega Videos de tu inmueble"
+            android:backgroundTint="#8B5E83"
+            android:layout_marginHorizontal="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fotos 360°"
+            android:layout_marginBottom="30dp"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            />
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:id="@+id/imageView3"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/galleryBtn3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agrega Fotos en 360° de tu inmueble"
+            android:backgroundTint="#8B5E83"
+            android:layout_marginHorizontal="20dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continuar"
+            android:id="@+id/btnContinuar3"
+            android:backgroundTint="#ffb600"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"/>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
