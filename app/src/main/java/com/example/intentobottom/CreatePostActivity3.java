@@ -1,12 +1,15 @@
-package com.example.intentobottom;
+package com.example.RoomiesMovilesTP;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ClipData;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageSwitcher;
@@ -18,8 +21,23 @@ import android.widget.Toast;
 import android.widget.VideoView;
 import android.widget.ViewSwitcher;
 
+import com.example.intentobottom.R;
+
+import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+
+import Beans.Post;
+import Beans.Post2;
+import Interface.PlaceHolderApi;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class CreatePostActivity3 extends AppCompatActivity {
 
@@ -44,10 +62,15 @@ public class CreatePostActivity3 extends AppCompatActivity {
     int position = 0;
     List<String> imagesEncodedList;
 
+    Post2 post;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_post3);
+
+        // To retrieve object in second Activity
+        post=(Post2) getIntent().getSerializableExtra("post");
 
         select = findViewById(R.id.select);
         imageView = findViewById(R.id.image);
@@ -70,6 +93,13 @@ public class CreatePostActivity3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(getApplicationContext(),CreatePostActivity4.class);
+
+                //post.setPhoto("https://www.inmoblog.com/wp-content/uploads/2014/06/imagen-vivienda-optima.jpg");
+
+
+
+                postData(post);
+
                 startActivity(i);
             }
         });
@@ -195,6 +225,46 @@ public class CreatePostActivity3 extends AppCompatActivity {
         else if (requestCode==3 && resultCode == RESULT_OK && null != data){
             imagePhoto.setVisibility(View.VISIBLE);
             Uri imgUri=data.getData();
+
+            System.out.println("prueba");
+
+            if (imgUri != null) {
+                try {
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imgUri);
+
+                    ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                    bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
+                    byte[] byteArray = outputStream.toByteArray();
+
+                    //Use your Base64 String as you wish
+                    String encodedString = Base64.encodeToString(byteArray, Base64.DEFAULT);
+
+                    post.setPhoto(encodedString);
+                    System.out.println("fotooooo");
+                    System.out.println(encodedString);
+                    System.out.println("fotooooo2");
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+           /* final InputStream imageStream;
+            try {
+                imageStream = getContentResolver().openInputStream(imgUri);
+                final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
+                String encodedImage = encodeImage(selectedImage);
+
+                //System.out.println("pruebafoto");
+                //System.out.println(encodedImage);
+                //post.setPhoto(encodedImage);
+
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }*/
+
+
+
             imagePhoto.setImageURI(imgUri);
         }
         else {
@@ -203,5 +273,53 @@ public class CreatePostActivity3 extends AppCompatActivity {
         }
 
     }
+
+    private void postData(Post2 post) {
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://roomiesapi20220418172319.azurewebsites.net/api/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        PlaceHolderApi placeholder = retrofit.create(PlaceHolderApi.class);
+
+
+        System.out.println("pepesi");
+        System.out.println(post);
+        System.out.println(post.getAddress());
+        System.out.println(post.getTitle());
+        System.out.println(post.getPhoto());
+        System.out.println(post.getPrice());
+        System.out.println(post.getRoomQuantity());
+
+        // calling a method to create a post and passing our modal class.
+        Call<Post2> call = placeholder.createPost(post);
+
+        // on below line we are executing our method.
+        call.enqueue(new Callback<Post2>() {
+            @Override
+            public void onResponse(Call<Post2> call, Response<Post2> response) {
+                // this method is called when we get response from our api.
+                //Toast.makeText(CreatePostActivity3.this, "Data added to API", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(CreatePostActivity3.this, responseFromAPI.getAddress(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<Post2> call, Throwable t) {
+
+            }
+        });
+    }
+
+    private String encodeImage(Bitmap bm)
+    {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bm.compress(Bitmap.CompressFormat.PNG,100,baos);
+        byte[] b = baos.toByteArray();
+        String encImage = Base64.encodeToString(b, Base64.DEFAULT);
+
+        return encImage;
+    }
+
 
 }

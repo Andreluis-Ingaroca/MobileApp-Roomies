@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreatePostActivity2">
+    tools:context="com.example.RoomiesMovilesTP.CreatePostActivity2">
 
     <LinearLayout
         android:orientation="vertical"
@@ -135,6 +135,7 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/rounded_box"
                 android:padding="15dp"
+                android:id="@+id/edtArea"
                 />
 
             <TextView
@@ -216,6 +217,7 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/rounded_box"
                 android:padding="15dp"
+                android:id="@+id/edtPrice"
                 />
 
 
@@ -239,6 +241,7 @@
             android:background="@drawable/rounded_box"
             android:padding="15dp"
             android:hint="Título"
+            android:id="@+id/edtTitle"
             />
         <EditText
             android:layout_width="match_parent"
@@ -250,6 +253,7 @@
             android:hint="Descripción"
             android:inputType="textImeMultiLine"
             android:scrollbars="vertical"
+            android:id="@+id/edtDescription"
             />
 
         <Button

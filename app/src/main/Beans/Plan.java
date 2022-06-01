@@ -1,6 +1,8 @@
 package Beans;
 
-public class Plan {
+import java.io.Serializable;
+
+public class Plan implements Serializable {
     private int id;
     private float price;
     private String name;
