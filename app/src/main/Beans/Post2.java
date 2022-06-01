@@ -1,13 +1,34 @@
 package Beans;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
-public class Post implements Serializable {
+public class Post2 implements Serializable {
 
-    public int id;
+/*    @SerializedName("title")
+    public String title;
+    @SerializedName("description")
+    public String description;
+    @SerializedName("address")
+    public String address;
+    @SerializedName("province")
+    public String province;
+    @SerializedName("district")
+    public String district;
+    @SerializedName("photo")
+    public String photo;
+    @SerializedName("department")
+    public String department;
+    @SerializedName("price")
+    public float price;
+    @SerializedName("roomQuantity")
+    public int roomQuantity;
+    @SerializedName("bathroomQuantity")
+    public int bathroomQuantity;*/
+    //ArrayList < Object > rules = new ArrayList < Object > ();
+
     public String title;
     public String description;
     public String address;
@@ -18,13 +39,9 @@ public class Post implements Serializable {
     public float price;
     public int roomQuantity;
     public int bathroomQuantity;
-    public String postDate;
-    public Landlord landlord;
-    ArrayList < Object > rules = new ArrayList < Object > ();
-    public boolean flag;
 
-    public Post(int id, String title, String description, String address, String province, String district, String photo, String department, float price, int roomQuantity, int bathroomQuantity, String postDate, Landlord landlord,boolean flag) {
-        this.id = id;
+
+    public Post2(String title, String description, String address, String province, String district, String photo, String department, float price, int roomQuantity, int bathroomQuantity) {
         this.title = title;
         this.description = description;
         this.address = address;
@@ -35,26 +52,8 @@ public class Post implements Serializable {
         this.price = price;
         this.roomQuantity = roomQuantity;
         this.bathroomQuantity = bathroomQuantity;
-        this.postDate = postDate;
-        this.landlord = landlord;
-        this.flag=flag;
     }
 
-    public boolean isFlag() {
-        return flag;
-    }
-
-    public void setFlag(boolean flag) {
-        this.flag = flag;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getTitle() {
         return title;
@@ -116,7 +115,7 @@ public class Post implements Serializable {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
@@ -136,19 +135,4 @@ public class Post implements Serializable {
         this.bathroomQuantity = bathroomQuantity;
     }
 
-    public String getPostDate() {
-        return postDate;
-    }
-
-    public void setPostDate(String postDate) {
-        this.postDate = postDate;
-    }
-
-    public Landlord getLandlord() {
-        return landlord;
-    }
-
-    public void setLandlord(Landlord landlord) {
-        this.landlord = landlord;
-    }
 }
