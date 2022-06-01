@@ -6,22 +6,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context="com.example.RoomiesMovilesTP.HomeFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="end"
-        android:layout_marginRight="30dp">
+        android:gravity="end">
 
         <Button
             android:id="@+id/btnFilter"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Filtros"
             android:backgroundTint="#8B5E83"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="10dp"/>
 
  <!--       <Button
             android:layout_width="135dp"

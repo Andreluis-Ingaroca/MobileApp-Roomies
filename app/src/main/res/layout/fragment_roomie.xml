@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RoomieFragment">
+    tools:context="com.example.RoomiesMovilesTP.RoomieFragment">
 
     <LinearLayout
         android:orientation="horizontal"

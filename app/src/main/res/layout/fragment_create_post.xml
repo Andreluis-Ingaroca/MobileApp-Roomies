@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreatePostFragment"
+    tools:context="com.example.RoomiesMovilesTP.CreatePostFragment"
     android:orientation="vertical">
 
     <TextView
@@ -41,7 +41,8 @@
         android:layout_marginBottom="20dp"
         android:hint="Calle y Número"
         android:background="@drawable/rounded_box"
-        android:padding="15dp"/>
+        android:padding="15dp"
+        android:id="@+id/edtStreet"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,7 +50,8 @@
         android:layout_marginBottom="20dp"
         android:hint="Departamento"
         android:background="@drawable/rounded_box"
-        android:padding="15dp"/>
+        android:padding="15dp"
+        android:id="@+id/edtRegion"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,7 +59,8 @@
         android:layout_marginBottom="20dp"
         android:hint="Provincia"
         android:background="@drawable/rounded_box"
-        android:padding="15dp"/>
+        android:padding="15dp"
+        android:id="@+id/edtProvince"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,7 +68,8 @@
         android:layout_marginBottom="30dp"
         android:hint="Distrito"
         android:background="@drawable/rounded_box"
-        android:padding="15dp"/>
+        android:padding="15dp"
+        android:id="@+id/edtDistrict"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

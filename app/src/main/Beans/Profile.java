@@ -9,7 +9,7 @@ public class Profile {
     private String cellPhone;
     private String idCard;
     private String description;
-    private Date birthday;
+    private String birthday;
     private String department;
     private String province;
     private String district;
@@ -18,7 +18,7 @@ public class Profile {
     private Date startSubscription;
     private Date endSubsciption;
 
-    public Profile(int id, String name, String lastName, String cellPhone, String idCard, String description, Date birthday, String department, String province, String district, String profilePicture, Plan plan, Date startSubscription, Date endSubsciption) {
+    public Profile(int id, String name, String lastName, String cellPhone, String idCard, String description, String birthday, String department, String province, String district, String profilePicture, Plan plan, Date startSubscription, Date endSubsciption) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
@@ -83,11 +83,11 @@ public class Profile {
         this.description = description;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
