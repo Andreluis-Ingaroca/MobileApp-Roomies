@@ -4,14 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.example.RoomiesMovilesTP.MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <!--Imágenes de la propiedad-->
-        <ViewFlipper
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/imgPost"
+            android:scaleType="centerCrop"/>
+
+        <!--<ViewFlipper
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:flipInterval="2000"
@@ -31,7 +38,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/casa3"/>
         </ViewFlipper>
-
+        -->
 
         <!--Dirección y botón de favorito-->
         <RelativeLayout
@@ -41,7 +48,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Calle Los Halcoles 592"
+                android:id="@+id/txtDireccion"
                 android:textSize="23dp"
                 android:textStyle="bold"
                 android:layout_marginStart="10dp"/>
@@ -49,7 +56,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Surquillo, Lima"
+                android:id="@+id/txtDistrito"
                 android:textSize="22dp"
                 android:textStyle="bold"
                 android:layout_marginStart="10dp"
@@ -59,7 +66,6 @@
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_baseline_favorite_24"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="30dp"
                 android:layout_marginTop="5dp"/>
@@ -95,7 +101,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="16dp"
                     android:textColor="@color/black"
-                    android:text="S./ 900"/>
+                    android:id="@+id/txtPrecio"/>
             </LinearLayout>
 
             <!--Cantidad de dormitorios-->
@@ -116,7 +122,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="3"
+                    android:id="@+id/txtDormitorios"
                     android:textSize="16dp"
                     android:textColor="@color/black"
                     android:textAlignment="center"/>
@@ -139,7 +145,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="2"
+                    android:id="@+id/txtBaños"
                     android:textSize="16dp"
                     android:textColor="@color/black"
                     android:textAlignment="center"/>
@@ -193,22 +199,9 @@
                 android:justificationMode="inter_word"
                 android:textSize="16dp"
                 android:textColor="@color/black"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra in tortor vitae fermentum. Vivamus dui augue, vestibulum scelerisque elit sit amet, blandit molestie neque. Donec a venenatis mauris, sed mollis lectus. Phasellus commodo accumsan dui sit amet fermentum. Praesent eu convallis erat. Ut malesuada rutrum facilisis."/>
+                android:id="@+id/txtDescripcion"/>
 
             <!--Ubicación de la propiedad-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Ubicación"
-                android:textSize="22dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:src="@drawable/maps"/>
 
             <!--Normas de convivencia-->
             <TextView
@@ -250,24 +243,26 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Helena María"
-                    android:textSize="20dp"
+                    android:id="@+id/txtLandlordName"
+                    android:textSize="25dp"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="40dp"
-                    android:text="Hidalgo Pérez"
+                    android:layout_marginTop="35dp"
+                    android:id="@+id/txtLandlordLastName"
                     android:textSize="20dp"
                     android:textStyle="bold"/>
+
                 <Button
+                    android:id="@+id/btnContactar"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="70dp"
-                    android:text="CONTACTAR"
-                    android:id="@+id/btnContactar"
-                    android:backgroundTint="#ffb600"/>
+                    android:backgroundTint="#ffb600"
+                    android:text="CONTACTAR" />
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -297,35 +292,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Johana Ramírez comentó"
+                    android:id="@+id/txtReviewAuthor"
                     android:textSize="20dp"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="En persona la propiedad es muy bonita, cumple con todos los requisitos para ser una propiedad en ensueños."/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:background="@drawable/data_box">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Dario Valdez comentó"
-                    android:textSize="20dp"
-                    android:textColor="@color/black"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="Me agradó mucho el vecindario en donde está la propiedad, definitivamente una opción."/>
+                    android:id="@+id/txtReviewContent"/>
             </LinearLayout>
             <Button
                 android:layout_width="match_parent"
