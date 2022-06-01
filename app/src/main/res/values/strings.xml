@@ -3,6 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string-array name="listDepartments">
+        <item>Todos</item>
         <item>Lima</item>
         <item>Junin</item>
         <item>Arequipa</item>
@@ -11,6 +12,7 @@
     <string name="departments_prompt">Seleccione un departamento</string>
 
     <string-array name="listProvinces">
+        <item>Todos</item>
         <item>Lima</item>
         <item>Junin</item>
         <item>Arequipa</item>
@@ -19,10 +21,11 @@
     <string name="provinces_prompt">Seleccione una provincia</string>
 
     <string-array name="listDistricts">
+        <item>Todos</item>
         <item>Miraflores</item>
         <item>Surco</item>
-        <item>Lince</item>
-        <item>Magdalena</item>
+        <item>Chorrillos</item>
+        <item>Barranco</item>
     </string-array>
     <string name="districts_prompt">Seleccione un distrito</string>
 
