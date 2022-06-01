@@ -12,9 +12,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.IntentoBottom">
+        android:theme="@style/Theme.IntentoBottom"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name=".Login"
+            android:name="com.example.RoomiesMovilesTP.Login"
             android:exported="true" >
 
             <intent-filter>
@@ -23,40 +24,44 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
+
         </activity>
         <activity
-            android:name=".RegisterActivity4"
+            android:name="com.example.RoomiesMovilesTP.RegisterActivity4"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity3"
+            android:name="com.example.RoomiesMovilesTP.RegisterActivity3"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity2"
+            android:name="com.example.RoomiesMovilesTP.RegisterActivity2"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name="com.example.RoomiesMovilesTP.RegisterActivity"
             android:exported="false">
         </activity>
         <activity
-            android:name=".FavoritePostActivity"
+            android:name="com.example.RoomiesMovilesTP.FavoritePostActivity"
+            android:exported="false" >
+
+        </activity>
+
+        <activity
+            android:name="com.example.RoomiesMovilesTP.PostActivity"
             android:exported="false" />
         <activity
-            android:name=".PostActivity"
+            android:name="com.example.RoomiesMovilesTP.CreatePostActivity4"
             android:exported="false" />
         <activity
-            android:name=".CreatePostActivity4"
+            android:name="com.example.RoomiesMovilesTP.CreatePostActivity3"
             android:exported="false" />
         <activity
-            android:name=".CreatePostActivity3"
+            android:name="com.example.RoomiesMovilesTP.CreatePostActivity2"
             android:exported="false" />
         <activity
-            android:name=".CreatePostActivity2"
+            android:name="com.example.RoomiesMovilesTP.FilterActivity"
             android:exported="false" />
         <activity
-            android:name=".FilterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name="com.example.RoomiesMovilesTP.MainActivity"
             android:exported="false"></activity>
     </application>
 

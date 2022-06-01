@@ -17,24 +17,40 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:id="@+id/imagePost"/>
+            android:id="@+id/imagePost"
+            android:scaleType="centerCrop"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="5dp">
+            >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="5dp"
+                android:layout_gravity="center_vertical"
                 android:id="@+id/txtPrice"
                 android:textStyle="bold"
                 android:textSize="18dp"
                 android:textColor="@color/black"
                 android:text="PRICE"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fltBtnFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:tint="#ffb600"
+                app:backgroundTint="@color/white"
+                android:src="@drawable/ic_baseline_favorite_border_24"
+               />
 
             <!--            <TextView-->
             <!--                android:id="@+id/txtRating"-->
@@ -66,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="5dp">
+            >
 
             <TextView
                 android:layout_width="wrap_content"
@@ -77,14 +93,14 @@
                 android:text="district"
                 android:layout_marginLeft="30dp"/>
 
-            <TextView
+            <!--<TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/txtDepartment"
                 android:layout_marginLeft="90dp"
                 android:textSize="14dp"
                 android:textColor="@color/black"
-                android:text="department"/>
+                android:text="department"/>-->
 
         </LinearLayout>
 
@@ -94,32 +110,57 @@
             android:orientation="horizontal"
             android:padding="5dp">
 
-            <TextView
+<!--            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:id="@+id/txtArea"
                 android:textSize="14dp"
                 android:textColor="@color/black"
-                android:text="area"/>
+                android:text="area"/>-->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="4"
+                android:orientation="horizontal"
+                android:paddingVertical="10dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_king_bed_24"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="120dp"
+                android:layout_weight="1"
                 android:id="@+id/txtRoomQuantity"
                 android:textSize="14dp"
                 android:textColor="@color/black"
                 android:text="rooms"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="90dp"
-                android:id="@+id/txtBathroomQuantity"
-                android:textSize="14dp"
-                android:textColor="@color/black"
-                android:text="bathrooms"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_bathtub_24"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtBathroomQuantity"
+                    android:textSize="14dp"
+                    android:textColor="@color/black"
+                    android:text="bathrooms"/>
+
+            </LinearLayout>
+
+
+
+
 
         </LinearLayout>
 
@@ -128,6 +169,8 @@
             android:layout_height="wrap_content"
             android:text="Contactar"
             android:layout_gravity="center"
+            android:id="@+id/btnContactarHome"
+            android:layout_margin="10dp"
             android:backgroundTint="#ffb600"/>
 
     </LinearLayout>

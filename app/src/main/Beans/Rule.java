@@ -1,6 +1,8 @@
 package Beans;
 
-public class Rule {
+import java.io.Serializable;
+
+public class Rule implements Serializable {
     private int id;
     private String title;
     private String description;

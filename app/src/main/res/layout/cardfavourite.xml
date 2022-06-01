@@ -41,7 +41,6 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="10dp"
                 android:backgroundTint="#ffb600"
-                android:src="@drawable/ic_baseline_favorite_24"
                 app:fabSize="auto" />
         </RelativeLayout>
 
