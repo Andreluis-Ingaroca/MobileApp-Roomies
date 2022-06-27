@@ -8,24 +8,24 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/logoapp"
+        android:label="Roomies"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IntentoBottom"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.example.RoomiesMovilesTP.Login"
-            android:exported="true" >
-
+            android:name="com.example.RoomiesMovilesTP.HomeNoLoginActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
+        <activity
+            android:name="com.example.RoomiesMovilesTP.Login"
+            android:exported="false" />
         <activity
             android:name="com.example.RoomiesMovilesTP.RegisterActivity4"
             android:exported="false" />
@@ -37,14 +37,10 @@
             android:exported="false" />
         <activity
             android:name="com.example.RoomiesMovilesTP.RegisterActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
         <activity
             android:name="com.example.RoomiesMovilesTP.FavoritePostActivity"
-            android:exported="false" >
-
-        </activity>
-
+            android:exported="false" />
         <activity
             android:name="com.example.RoomiesMovilesTP.PostActivity"
             android:exported="false" />
@@ -62,7 +58,13 @@
             android:exported="false" />
         <activity
             android:name="com.example.RoomiesMovilesTP.MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
+        <activity
+            android:name="com.example.RoomiesMovilesTP.ReviewsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.RoomiesMovilesTP.DashboardActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

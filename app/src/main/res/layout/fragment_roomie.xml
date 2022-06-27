@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,7 +10,8 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -22,10 +22,32 @@
             android:textAlignment="center"
             android:textSize="25sp"/>
 
-
     </LinearLayout>
 
-    <!--Por ahora se mostrará este card por temas de demostración-->
-    <include layout="@layout/cardroomate"/>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/viewPager"
+        android:foregroundGravity="center"
+        android:layout_centerInParent="true"
+        android:overScrollMode="never"
+        android:clipToPadding="false"/>
 
-</LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSearchRoomiesContact"
+        android:layout_below="@+id/viewPager"
+        android:layout_marginHorizontal="80dp"
+        android:backgroundTint="#ffb600"
+        android:text="Contactar"/>
+    
+    <!--<org.imaginativeworld.whynotimagecarousel.ImageCarousel
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:id="@+id/carousel"/>-->
+
+    <!--Por ahora se mostrará este card por temas de demostración--><!--
+    <include layout="@layout/cardroomate"/>-->
+
+</RelativeLayout>

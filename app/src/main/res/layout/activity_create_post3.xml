@@ -25,30 +25,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Agrega fotos y videos de tu inmueble"
+            android:text="Agrega fotos de tu inmueble"
             android:gravity="center"
             android:layout_marginBottom="20dp"
             android:textStyle="bold"
             android:textSize="28dp"
             />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Fotos"
-            android:layout_marginBottom="30dp"
-            android:textStyle="bold"
-            android:textSize="18dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            />
 
-        <Button
-            android:id="@+id/select"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:text="Agrega fotos de tu inmueble"
-            android:backgroundTint="#8B5E83"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -88,33 +71,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Videos"
-            android:layout_marginBottom="30dp"
-            android:textStyle="bold"
-            android:textSize="18dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
-            />
-        <VideoView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:id="@+id/video"
-            android:layout_gravity="center"
-            android:visibility="gone"
-            />
-
-        <Button
-            android:id="@+id/galleryBtn2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Agrega Videos de tu inmueble"
-            android:backgroundTint="#8B5E83"
-            android:layout_marginHorizontal="20dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Fotos 360°"
+            android:text="Fotos"
             android:layout_marginBottom="30dp"
             android:textStyle="bold"
             android:textSize="18dp"
@@ -132,7 +89,7 @@
             android:id="@+id/galleryBtn3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Agrega Fotos en 360° de tu inmueble"
+            android:text="Agrega Fotos de tu inmueble"
             android:backgroundTint="#8B5E83"
             android:layout_marginHorizontal="20dp"/>
 
